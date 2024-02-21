@@ -20,5 +20,6 @@
 
 install(FILES
     sonik_float32IQ_to_complex.block.yml
+    sonik_complex_to_float32IQ.block.yml
     DESTINATION share/gnuradio/grc/blocks
 )

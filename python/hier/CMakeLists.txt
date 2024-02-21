@@ -33,6 +33,7 @@ GR_PYTHON_INSTALL(
     FILES
     __init__.py
     float32IQ_to_complex.py
+    complex_to_float32IQ.py
     DESTINATION ${GR_PYTHON_DIR}/sonik/hier
 )
 

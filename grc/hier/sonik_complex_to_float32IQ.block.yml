@@ -1,0 +1,19 @@
+id: complex_to_float32IQ
+label: Complex to Float (IQ)
+category: '[Sonik]'
+
+inputs:
+-   label: in
+    dtype: complex
+    vlen: 1
+
+outputs:
+-   label: out
+    dtype: float
+    vlen: 1
+
+templates:
+    imports: import sonik.hier
+    make: sonik.hier.complex_to_float32IQ()
+
+file_format: 1
