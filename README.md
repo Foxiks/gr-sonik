@@ -1,7 +1,8 @@
 # gr-sonik
 OOT GnuRadio blocks for working in the SONIK network
 ### Installation
-```mkdir build
+```
+mkdir build
 cd build
 cmake ..
 make
