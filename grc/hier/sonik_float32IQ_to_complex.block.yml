@@ -1,6 +1,6 @@
 id: float32IQ_to_complex
 label: Float (IQ) to Complex
-category: '[Sonik]'
+category: '[Sonik]/Type Convertes'
 
 inputs:
 -   label: in

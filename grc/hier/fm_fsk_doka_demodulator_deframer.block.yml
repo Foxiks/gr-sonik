@@ -1,0 +1,47 @@
+id: fm_fsk_doka_demodulator_deframer
+label: FM-FSK (DOKA) Demodulator and Deframer
+category: '[Sonik]/Satellites'
+
+parameters:
+-   id: pack_len
+    label: Packet length (bytes)
+    dtype: int
+    default: '132'
+    hide: none
+-   id: samp_rate
+    label: Audio Sample Rate
+    dtype: real
+    default: '48000'
+    hide: none
+-   id: syncword
+    label: Syncword
+    dtype: string
+    default: '"1100010010110010001010011000010101110000011011111011110001011010"'
+    hide: none
+-   id: threshold
+    label: Syncword Threshold
+    dtype: int
+    default: '10'
+    hide: none
+
+inputs:
+-   label: audio
+    dtype: float
+    vlen: 1
+
+outputs:
+-   label: bytes
+    dtype: byte
+    vlen: 1
+
+templates:
+    imports: 'import sonik.hier  # grc-generated hier_block'
+    make: "sonik.hier.fm_fsk_doka_demodulator_deframer(\n    pack_len=${ pack_len },\n    samp_rate=${ samp_rate\
+        \ },\n    syncword=${ syncword },\n    threshold=${ threshold },\n)"
+    callbacks:
+    - set_pack_len(${ pack_len })
+    - set_samp_rate(${ samp_rate })
+    - set_syncword(${ syncword })
+    - set_threshold(${ threshold })
+
+file_format: 1

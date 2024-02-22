@@ -34,6 +34,7 @@ GR_PYTHON_INSTALL(
     __init__.py
     float32IQ_to_complex.py
     complex_to_float32IQ.py
+    fm_fsk_doka_demodulator_deframer.py
     DESTINATION ${GR_PYTHON_DIR}/sonik/hier
 )
 
