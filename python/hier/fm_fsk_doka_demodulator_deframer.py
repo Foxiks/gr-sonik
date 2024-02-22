@@ -18,7 +18,7 @@ import satellites.hier
 class fm_fsk_doka_demodulator_deframer (gr.hier_block2):
     def __init__(self, baud_rate=4800, pack_len=132, samp_rate=48000, syncword="1100010010110010001010011000010101110000011011111011110001011010", taps=16, threshold=10):
         gr.hier_block2.__init__(
-            self, "FM-FSK (DOKA) Demodulator+Deframer",
+            self, "FM-FSK (DOKA) Demodulator and Deframer",
                 gr.io_signature(1, 1, gr.sizeof_float*1),
                 gr.io_signature(1, 1, gr.sizeof_char*1),
         )
