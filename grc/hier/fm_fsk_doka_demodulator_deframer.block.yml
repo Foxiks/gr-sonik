@@ -3,6 +3,11 @@ label: FM-FSK (DOKA) Demodulator and Deframer
 category: '[Sonik]/Satellites'
 
 parameters:
+-   id: baud_rate
+    label: Baud Rate
+    dtype: int
+    default: '4800'
+    hide: none
 -   id: pack_len
     label: Packet length (bytes)
     dtype: int
@@ -17,6 +22,11 @@ parameters:
     label: Syncword
     dtype: string
     default: '"1100010010110010001010011000010101110000011011111011110001011010"'
+    hide: none
+-   id: taps
+    label: Taps
+    dtype: int
+    default: '16'
     hide: none
 -   id: threshold
     label: Syncword Threshold
@@ -36,12 +46,15 @@ outputs:
 
 templates:
     imports: 'import sonik.hier  # grc-generated hier_block'
-    make: "sonik.hier.fm_fsk_doka_demodulator_deframer(\n    pack_len=${ pack_len },\n    samp_rate=${ samp_rate\
-        \ },\n    syncword=${ syncword },\n    threshold=${ threshold },\n)"
+    make: "sonik.hier.fm_fsk_doka_demodulator_deframer(\n    baud_rate=${ baud_rate },\n    pack_len=${ pack_len\
+        \ },\n    samp_rate=${ samp_rate },\n    syncword=${ syncword },\n    taps=${\
+        \ taps },\n    threshold=${ threshold },\n)"
     callbacks:
+    - set_baud_rate(${ baud_rate })
     - set_pack_len(${ pack_len })
     - set_samp_rate(${ samp_rate })
     - set_syncword(${ syncword })
+    - set_taps(${ taps })
     - set_threshold(${ threshold })
 
 file_format: 1
