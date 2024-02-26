@@ -22,5 +22,6 @@ install(FILES
     sonik_float32IQ_to_complex.block.yml
     sonik_complex_to_float32IQ.block.yml
     fm_fsk_doka_demodulator_deframer.block.yml
+    soniks_data_sink.block.yml
     DESTINATION share/gnuradio/grc/blocks
 )

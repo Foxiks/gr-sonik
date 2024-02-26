@@ -1,0 +1,33 @@
+id: soniks_data_sink
+label: Soniks Decoded Frames Sink
+category: '[Sonik]/Sinks'
+
+parameters:
+- id: decoded_data_file_path
+  label: Decoded Data File Path
+  dtype: string
+  default: '/tmp/.satnogs/data/data'
+- id: sat_id
+  label: Sat ID
+  dtype: string
+  default: '"0"'
+- id: packet_len
+  label: Packet len
+  dtype: int
+  default: '132'
+
+inputs:
+-   label: in
+    dtype: byte
+    vlen: 1
+
+outputs:
+-   label: out
+    dtype: byte
+    vlen: 1
+
+templates:
+    imports: import sonik.hier
+    make: sonik.hier.soniks_data_sink(${decoded_data_file_path}, ${sat_id}, ${packet_len})
+
+file_format: 1
