@@ -32,9 +32,8 @@ endif()
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    fm_fsk_doka_demodulator_deframer.py
-    stratosat_xband_deframer_descrambler.py
-    DESTINATION ${GR_PYTHON_DIR}/sonik/hier
+    binary_debug.py
+    DESTINATION ${GR_PYTHON_DIR}/sonik/debug
 )
 
 ########################################################################

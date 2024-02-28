@@ -1,0 +1,19 @@
+id: binary_debug
+label: Bytes Data Debugger
+category: '[Sonik]/Debug'
+
+inputs:
+-   label: in
+    dtype: byte
+    vlen: 1
+
+outputs:
+-   label: out
+    dtype: byte
+    vlen: 1
+
+templates:
+    imports: import sonik.debug
+    make: sonik.debug.binary_debug()
+
+file_format: 1

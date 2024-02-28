@@ -6,7 +6,7 @@ parameters:
 - id: decoded_data_file_path
   label: Decoded Data File Path
   dtype: string
-  default: '/tmp/.satnogs/data/data'
+  default: '/tmp/.satnogs/data/'
 - id: sat_id
   label: Sat ID
   dtype: string
@@ -27,7 +27,7 @@ outputs:
     vlen: 1
 
 templates:
-    imports: import sonik.hier
-    make: sonik.hier.soniks_data_sink(${decoded_data_file_path}, ${sat_id}, ${packet_len})
+    imports: import sonik.sinks
+    make: sonik.sinks.soniks_data_sink(${decoded_data_file_path}, ${sat_id}, ${packet_len})
 
 file_format: 1

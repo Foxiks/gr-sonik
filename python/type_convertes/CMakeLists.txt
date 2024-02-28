@@ -32,9 +32,9 @@ endif()
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    fm_fsk_doka_demodulator_deframer.py
-    stratosat_xband_deframer_descrambler.py
-    DESTINATION ${GR_PYTHON_DIR}/sonik/hier
+    float32IQ_to_complex.py
+    complex_to_float32IQ.py
+    DESTINATION ${GR_PYTHON_DIR}/sonik/type_convertes
 )
 
 ########################################################################

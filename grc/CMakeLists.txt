@@ -10,3 +10,7 @@ install(FILES
     DESTINATION share/gnuradio/grc/blocks
 )
 add_subdirectory(hier)
+add_subdirectory(debug)
+add_subdirectory(scramblers)
+add_subdirectory(sinks)
+add_subdirectory(type_convertes)

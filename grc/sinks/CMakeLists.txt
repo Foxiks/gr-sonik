@@ -19,7 +19,6 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    fm_fsk_doka_demodulator_deframer.block.yml
-    stratosat_xband_deframer_descrambler.block.yml
+    soniks_data_sink.block.yml
     DESTINATION share/gnuradio/grc/blocks
 )

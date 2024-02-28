@@ -13,7 +13,7 @@ outputs:
     vlen: 1
 
 templates:
-    imports: import sonik.hier
-    make: sonik.hier.float32IQ_to_complex()
+    imports: import sonik.type_convertes
+    make: sonik.type_convertes.float32IQ_to_complex()
 
 file_format: 1

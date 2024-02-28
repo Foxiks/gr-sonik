@@ -8,6 +8,4 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
-
-from .fm_fsk_doka_demodulator_deframer import fm_fsk_doka_demodulator_deframer
-from .stratosat_xband_deframer_descrambler import stratosat_xband_deframer_descrambler
+from .binary_debug import binary_debug

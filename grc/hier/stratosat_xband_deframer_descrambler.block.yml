@@ -1,0 +1,41 @@
+id: stratosat_xband_deframer_descrambler
+label: Stratosat TK-1 X-Band Deframer and Descrambler
+category: '[Sonik]/Deframes'
+
+parameters:
+-   id: frame_len
+    label: Packet Length
+    dtype: int
+    default: '130'
+    hide: none
+-   id: syncword
+    label: Syncword
+    dtype: string
+    default: '"00000000000000001111011010001101"'
+    hide: none
+-   id: threshold
+    label: Syncword Threshold
+    dtype: int
+    default: '3'
+    hide: none
+
+inputs:
+-   label: bytes
+    dtype: byte
+    vlen: 1
+
+outputs:
+-   label: frames
+    dtype: byte
+    vlen: 1
+
+templates:
+    imports: 'import sonik.hier  # grc-generated hier_block'
+    make: "sonik.hier.stratosat_xband_deframer_descrambler(\n    frame_len=${ frame_len },\n\
+        \    syncword=${ syncword },\n    threshold=${ threshold },\n)"
+    callbacks:
+    - set_frame_len(${ frame_len })
+    - set_syncword(${ syncword })
+    - set_threshold(${ threshold })
+
+file_format: 1

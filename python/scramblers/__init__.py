@@ -9,5 +9,4 @@
 #
 
 
-from .fm_fsk_doka_demodulator_deframer import fm_fsk_doka_demodulator_deframer
-from .stratosat_xband_deframer_descrambler import stratosat_xband_deframer_descrambler
+from .stratosat_xband_scrambler import stratosat_xband_scrambler
