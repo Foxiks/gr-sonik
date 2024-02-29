@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-3.0
 #
 # GNU Radio Python Flow Graph
-# Title: Soniks Data Sink
+# Title: Stratosat X-Band Scrambler
 # GNU Radio version: 3.10.7.0
 
 from gnuradio import gr
@@ -12,7 +12,7 @@ import pmt
     
 class stratosat_xband_scrambler(gr.sync_block):
     """
-    Debug
+    Stratosat X-Band Scrambler
     """
     def __init__(self):
         gr.basic_block.__init__(

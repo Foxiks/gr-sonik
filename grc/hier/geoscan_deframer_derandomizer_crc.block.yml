@@ -1,0 +1,48 @@
+id: geoscan_deframer_derandomizer_crc
+label: GEOSCAN UHF Link Deframer and Derandomizer (CRC)
+category: '[Sonik]/Deframes'
+
+parameters:
+-   id: crc_state
+    label: CRC Check
+    dtype: int
+    default: 'True'
+    hide: none
+-   id: packet_length
+    label: Packet Length
+    dtype: int
+    default: '66'
+    hide: none
+-   id: syncword
+    label: Syncword
+    dtype: string
+    default: '10010011000010110101000111011110'
+    hide: none
+-   id: threshold
+    label: Syncword Threshold
+    dtype: int
+    default: '4'
+    hide: none
+
+inputs:
+-   label: Frames In
+    dtype: byte
+    vlen: 1
+
+outputs:
+-   label: Frames Out
+    dtype: byte
+    vlen: 1
+
+templates:
+    imports: 'import sonik.hier'
+    make: "sonik.hier.geoscan_deframer_derandomizer_crc(\n    crc_state=${ crc_state },\n   \
+        \ packet_length=${ packet_length },\n    syncword=${ syncword },\n    threshold=${\
+        \ threshold },\n)"
+    callbacks:
+    - set_crc_state(${ crc_state })
+    - set_packet_length(${ packet_length })
+    - set_syncword(${ syncword })
+    - set_threshold(${ threshold })
+
+file_format: 1

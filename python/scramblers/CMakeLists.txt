@@ -33,6 +33,7 @@ GR_PYTHON_INSTALL(
     FILES
     __init__.py
     stratosat_xband_scrambler.py
+    geoscan_scrambler_crc.py
     DESTINATION ${GR_PYTHON_DIR}/sonik/scramblers
 )
 
