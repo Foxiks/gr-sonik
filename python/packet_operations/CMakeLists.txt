@@ -18,10 +18,28 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 
-install(FILES
-    fm_fsk_doka_demodulator_deframer.block.yml
-    stratosat_xband_deframer_descrambler.block.yml
-    geoscan_deframer_derandomizer_crc.block.yml
-    soniks_frames_mixer.block.yml
-    DESTINATION share/gnuradio/grc/blocks
+########################################################################
+# Include python install macros
+########################################################################
+include(GrPython)
+if(NOT PYTHONINTERP_FOUND)
+    return()
+endif()
+
+########################################################################
+# Install python sources
+########################################################################
+GR_PYTHON_INSTALL(
+    FILES
+    __init__.py
+    soniks_messages_mixer_pdu.py
+    DESTINATION ${GR_PYTHON_DIR}/sonik/packet_operations
 )
+
+########################################################################
+# Handle the unit tests
+########################################################################
+include(GrTest)
+
+set(GR_TEST_TARGET_DEPS gnuradio-sonik)
+set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR} ${CMAKE_BINARY_DIR}/swig)

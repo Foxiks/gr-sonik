@@ -1,0 +1,19 @@
+id: soniks_messages_mixer_pdu
+label: Soniks Messages Mixer (PDU)
+category: '[Sonik]/Packet Operations'
+
+inputs:
+-   domain: message
+    id: in 0
+-   domain: message
+    id: in 1
+
+outputs:
+-   domain: message
+    id: out
+
+templates:
+    imports: import sonik.packet_operations
+    make: sonik.packet_operations.soniks_messages_mixer_pdu()
+
+file_format: 1

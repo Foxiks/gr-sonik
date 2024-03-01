@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Copyright 2019 Daniel Estevez <daniel@destevez.net>
+# Copyright 2024 Foxiks UB1QBJ
 #
 # This file is part of gr-sonik
 #

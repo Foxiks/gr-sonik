@@ -60,7 +60,7 @@ class geoscan_uhf_scrambler(gr.sync_block):
                 arr.append(msg[i]^self.mask[i])
             except IndexError:
                 arr.append(msg[i])
-        msg_out = arr
+        msg_out = arr[:64]
         if(self.crc_selector):
             crc_calculated=self.calculator.checksum(bytes(arr[:64]))
             crc_frame_stamp=int.from_bytes(bytes(arr[64:]),'big')

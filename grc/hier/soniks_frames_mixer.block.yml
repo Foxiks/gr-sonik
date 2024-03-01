@@ -1,0 +1,25 @@
+id: soniks_frames_mixer
+label: Soniks Frames Mixer
+category: '[Sonik]/Packet Operations'
+
+parameters: []
+
+inputs:
+-   label: Input Frames 1
+    dtype: byte
+    vlen: 1
+-   label: Input Frames 0
+    dtype: byte
+    vlen: 1
+
+outputs:
+-   label: Output Frames
+    dtype: byte
+    vlen: 1
+
+templates:
+    imports: 'import sonik.hier  # grc-generated hier_block'
+    make: sonik.hier.soniks_frames_mixer()
+    callbacks: []
+
+file_format: 1

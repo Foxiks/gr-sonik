@@ -35,6 +35,7 @@ GR_PYTHON_INSTALL(
     fm_fsk_doka_demodulator_deframer.py
     stratosat_xband_deframer_descrambler.py
     geoscan_deframer_derandomizer_crc.py
+    soniks_frames_mixer.py
     DESTINATION ${GR_PYTHON_DIR}/sonik/hier
 )
 
