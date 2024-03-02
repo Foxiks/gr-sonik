@@ -12,3 +12,4 @@ sudo ldconfig
 
 ### Required Dependencies
 1. gr-Satellites: https://github.com/daniestevez/gr-satellites
+2. CRC Lib: https://github.com/Nicoretti/crc
