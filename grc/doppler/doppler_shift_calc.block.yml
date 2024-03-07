@@ -1,0 +1,39 @@
+id: doppler_shift_calc
+label: GEOSCAN Doppler shift compensation calculator
+category: '[Sonik]/Doppler'
+
+parameters:
+- id: satllite_name
+  label: Satellite Name
+  dtype: string
+  default: 'GEOSCAN'
+- id: center_freq
+  label: Satellite center frequency (Hz)
+  dtype: string
+  default: '437100000'
+- id: tle_path
+  label: TLE Path
+  dtype: string
+  default: './tle.txt'
+- id: lon
+  label: Station longitude
+  dtype: string
+  default: '0'
+- id: lat
+  label: Station latitude
+  dtype: string
+  default: '0'
+- id: alt
+  label: Station altitude
+  dtype: string
+  default: '0'
+
+inputs:
+-   domain: message
+    id: in
+
+templates:
+    imports: import sonik.doppler
+    make: sonik.doppler.doppler_shift_calc(${satllite_name}, ${center_freq}, ${tle_path}, ${lon}, ${lat}, ${alt})
+
+file_format: 1
