@@ -1,5 +1,13 @@
 # gr-sonik
 OOT GnuRadio blocks for working in the SONIK network
+
+### Install Dependencies
+1. gr-Satellites: https://github.com/daniestevez/gr-satellites
+and
+```
+python3 -m pip install websocket crc ephem construct
+```
+
 ### Installation
 ```
 mkdir build
@@ -9,7 +17,3 @@ make
 sudo make install
 sudo ldconfig
 ```
-
-### Required Dependencies
-1. gr-Satellites: https://github.com/daniestevez/gr-satellites
-2. CRC Lib: https://github.com/Nicoretti/crc
