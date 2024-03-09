@@ -27,13 +27,21 @@ parameters:
   label: Station altitude
   dtype: string
   default: '0'
+- id: inv
+  label: Invert state
+  dtype: bool
+  default: False
 
 inputs:
 -   domain: message
     id: in
 
+outputs:
+-   domain: message
+    id: out
+
 templates:
     imports: import sonik.doppler
-    make: sonik.doppler.doppler_shift_calc(${satllite_name}, ${center_freq}, ${tle_path}, ${lon}, ${lat}, ${alt})
+    make: sonik.doppler.doppler_shift_calc(${satllite_name}, ${center_freq}, ${tle_path}, ${lon}, ${lat}, ${alt}, ${inv})
 
 file_format: 1

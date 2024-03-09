@@ -23,5 +23,6 @@ install(FILES
     stratosat_xband_deframer_descrambler.block.yml
     geoscan_deframer_derandomizer_crc.block.yml
     soniks_frames_mixer.block.yml
+    soniks_doppler_shift_compensator.block.yml
     DESTINATION share/gnuradio/grc/blocks
 )

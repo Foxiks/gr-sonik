@@ -1,0 +1,79 @@
+id: soniks_doppler_shift_compensator
+label: Soniks Doppler shift compensator
+category: '[Sonik]/Doppler'
+
+parameters:
+-   id: c_rf
+    label: Satellite Center frequency (Hz)
+    dtype: string
+    default: '435870000'
+    hide: none
+-   id: inv
+    label: Invert State
+    dtype: int
+    default: 'False'
+    hide: none
+-   id: s_alt
+    label: Station Altitude
+    dtype: string
+    default: '0'
+    hide: none
+-   id: s_lat
+    label: Station Latitude
+    dtype: string
+    default: '0'
+    hide: none
+-   id: s_lon
+    label: Station Longitude
+    dtype: string
+    default: '0'
+    hide: none
+-   id: samp_rate
+    label: Sample Rate
+    dtype: int
+    default: '48000'
+    hide: none
+-   id: sat_name
+    label: Satellite Name (From TLE File)
+    dtype: string
+    default: GEOSCAN
+    hide: none
+-   id: tle_p
+    label: TLE File Path
+    dtype: string
+    default: /path/to/tle.txt
+    hide: none
+-   id: up
+    label: Update Period (ms)
+    dtype: int
+    default: '1000'
+    hide: none
+
+inputs:
+-   label: in
+    dtype: complex
+    vlen: 1
+
+outputs:
+-   label: out
+    dtype: complex
+    vlen: 1
+
+templates:
+    imports: 'import sonik.hier'
+    make: "sonik.hier.soniks_doppler_shift_compensator(\n    c_rf=${ c_rf },\n    inv=${ inv\
+        \ },\n    s_alt=${ s_alt },\n    s_lat=${ s_lat },\n    s_lon=${ s_lon },\n\
+        \    samp_rate=${ samp_rate },\n    sat_name=${ sat_name },\n    tle_p=${\
+        \ tle_p },\n    up=${ up },\n)"
+    callbacks:
+    - set_c_rf(${ c_rf })
+    - set_inv(${ inv })
+    - set_s_alt(${ s_alt })
+    - set_s_lat(${ s_lat })
+    - set_s_lon(${ s_lon })
+    - set_samp_rate(${ samp_rate })
+    - set_sat_name(${ sat_name })
+    - set_tle_p(${ tle_p })
+    - set_up(${ up })
+
+file_format: 1

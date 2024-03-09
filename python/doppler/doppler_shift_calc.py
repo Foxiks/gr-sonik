@@ -8,7 +8,7 @@
 # GNU Radio version: 3.10.7.0
 
 from gnuradio import gr
-import xmlrpc.client
+#import xmlrpc.client
 import time
 import datetime
 from math import *
@@ -44,7 +44,7 @@ class doppler_shift_calc(gr.sync_block):
     """
     GEOSCAN Doppler shift compensation calculator
     """
-    def __init__(self,satllite_name,center_freq,tle_path,lon,lat,alt):
+    def __init__(self,satllite_name,center_freq,tle_path,lon,lat,alt,inv):
         gr.basic_block.__init__(
             self,
             name='Doppler shift compensation calculator',
@@ -56,6 +56,7 @@ class doppler_shift_calc(gr.sync_block):
         self.lat=lat
         self.alt=alt
         self.center_freq=center_freq
+        self.inv=inv
         name, tle1, tle2 = Tracker.tle_finder(filename=tle_path,satname=satllite_name)
         ec1_tle = { "name": name, \
                     "tle1": tle1, \
@@ -64,13 +65,13 @@ class doppler_shift_calc(gr.sync_block):
         self.tracker = Tracker(satellite=ec1_tle, groundstation=station)
         self.crxf=int(center_freq.replace('\n',''))
         self.message_port_register_in(pmt.intern('in'))
+        self.message_port_register_out(pmt.intern('out'))
         self.set_msg_handler(pmt.intern('in'), self.handle_msg)
         
     def handle_msg(self, msg_pmt):
         if(msg_pmt):
-            with xmlrpc.client.ServerProxy(f"http://127.0.0.1:8811/") as proxy:
-                self.tracker.set_epoch(time.time())
-                try:
-                    proxy.set_rx_freq(int(self.tracker.doppler(frequency_hz=self.crxf)))
-                except xmlrpc.client.Fault:
-                    return
+            self.tracker.set_epoch(time.time())
+            if(self.inv):
+                self.message_port_pub(pmt.intern('out'), pmt.dict_add(pmt.make_dict(), pmt.intern("freq"), pmt.from_float(-int(self.tracker.doppler(frequency_hz=self.crxf)))))
+            else:
+                self.message_port_pub(pmt.intern('out'), pmt.dict_add(pmt.make_dict(), pmt.intern("freq"), pmt.from_float(int(self.tracker.doppler(frequency_hz=self.crxf)))))
