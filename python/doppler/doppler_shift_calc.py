@@ -72,6 +72,6 @@ class doppler_shift_calc(gr.sync_block):
         if(msg_pmt):
             self.tracker.set_epoch(time.time())
             if(self.inv):
-                self.message_port_pub(pmt.intern('out'), pmt.dict_add(pmt.make_dict(), pmt.intern("freq"), pmt.from_float(-int(self.tracker.doppler(frequency_hz=self.crxf)))))
-            else:
                 self.message_port_pub(pmt.intern('out'), pmt.dict_add(pmt.make_dict(), pmt.intern("freq"), pmt.from_float(int(self.tracker.doppler(frequency_hz=self.crxf)))))
+            else:
+                self.message_port_pub(pmt.intern('out'), pmt.dict_add(pmt.make_dict(), pmt.intern("freq"), pmt.from_float(-int(self.tracker.doppler(frequency_hz=self.crxf)))))
