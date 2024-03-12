@@ -1,0 +1,28 @@
+id: soniks_audio_sink
+label: Soniks Audio Sink
+category: '[Sonik]/Audio'
+
+parameters:
+- id: samp_rate
+  label: Audio Sample Rate
+  dtype: int
+  default: '48000'
+- id: path
+  label: Output Audio Path
+  dtype: file_save
+  default: '/home/user/'
+- id: bitrate
+  label: Output Audio Bitrate
+  dtype: string
+  default: '192k'
+
+inputs:
+-   label: in
+    dtype: float
+    vlen: 1
+
+templates:
+    imports: import sonik.audio
+    make: sonik.audio.soniks_audio_sink(${samp_rate}, ${path}, ${bitrate})
+
+file_format: 1
