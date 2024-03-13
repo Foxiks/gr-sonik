@@ -5,7 +5,7 @@ category: '[Sonik]/Doppler'
 parameters:
 -   id: c_rf
     label: Satellite Center frequency (Hz)
-    dtype: string
+    dtype: raw
     default: '435870000'
     hide: none
 -   id: inv
@@ -15,17 +15,17 @@ parameters:
     hide: none
 -   id: s_alt
     label: Station Altitude
-    dtype: string
+    dtype: raw
     default: '0'
     hide: none
 -   id: s_lat
     label: Station Latitude
-    dtype: string
+    dtype: raw
     default: '0'
     hide: none
 -   id: s_lon
     label: Station Longitude
-    dtype: string
+    dtype: raw
     default: '0'
     hide: none
 -   id: samp_rate
@@ -35,12 +35,12 @@ parameters:
     hide: none
 -   id: sat_name
     label: Satellite Name (From TLE File)
-    dtype: string
+    dtype: raw
     default: GEOSCAN
     hide: none
 -   id: tle_p
     label: TLE File Path
-    dtype: string
+    dtype: raw
     default: /path/to/tle.txt
     hide: none
 -   id: up

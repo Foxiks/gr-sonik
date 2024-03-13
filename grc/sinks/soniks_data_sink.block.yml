@@ -5,12 +5,12 @@ category: '[Sonik]/Sinks'
 parameters:
 - id: decoded_data_file_path
   label: Decoded Data File Path
-  dtype: string
+  dtype: raw
   default: '/tmp/.satnogs/data/'
 - id: sat_id
   label: Sat ID
-  dtype: string
-  default: '"0"'
+  dtype: raw
+  default: '0'
 - id: packet_len
   label: Packet len
   dtype: int

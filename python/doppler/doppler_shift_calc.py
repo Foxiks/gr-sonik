@@ -50,12 +50,12 @@ class doppler_shift_calc(gr.sync_block):
             name='Doppler shift compensation calculator',
             in_sig=[],
             out_sig=[])
-        self.satllite_name=satllite_name
-        self.tle_path=tle_path
-        self.lon=lon
-        self.lat=lat
-        self.alt=alt
-        self.center_freq=center_freq
+        self.satllite_name=str(satllite_name)
+        self.tle_path=str(tle_path)
+        self.lon=str(lon)
+        self.lat=str(lat)
+        self.alt=str(alt)
+        self.center_freq=str(center_freq)
         self.inv=inv
         name, tle1, tle2 = Tracker.tle_finder(filename=tle_path,satname=satllite_name)
         ec1_tle = { "name": name, \
