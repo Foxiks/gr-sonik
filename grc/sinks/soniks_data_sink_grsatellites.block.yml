@@ -14,7 +14,7 @@ parameters:
 
 inputs:
 -   label: in
-    dtype: raw
+    dtype: message
     vlen: 1
 
 templates:
