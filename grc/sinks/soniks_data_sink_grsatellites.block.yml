@@ -1,0 +1,24 @@
+id: soniks_data_sink_grsatellites
+label: Soniks Decoded Frames Sink (Gr-Satellites)
+category: '[Sonik]/Sinks'
+
+parameters:
+- id: decoded_data_file_path
+  label: Decoded Data File Path
+  dtype: raw
+  default: '/tmp/.satnogs/data/'
+- id: sat_id
+  label: Sat ID
+  dtype: raw
+  default: '0'
+
+inputs:
+-   label: raw
+    dtype: byte
+    vlen: 1
+
+templates:
+    imports: import sonik.sinks
+    make: sonik.sinks.soniks_data_sink_grsatellites(${decoded_data_file_path}, ${sat_id})
+
+file_format: 1

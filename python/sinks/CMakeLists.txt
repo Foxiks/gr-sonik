@@ -33,6 +33,7 @@ GR_PYTHON_INSTALL(
     FILES
     __init__.py
     soniks_data_sink.py
+    soniks_data_sink_grsatellites.py
     DESTINATION ${GR_PYTHON_DIR}/sonik/sinks
 )
 

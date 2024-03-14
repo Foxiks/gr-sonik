@@ -10,3 +10,4 @@
 
 
 from .soniks_data_sink import soniks_data_sink
+from .soniks_data_sink_grsatellites import soniks_data_sink_grsatellites

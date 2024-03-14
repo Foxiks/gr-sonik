@@ -20,5 +20,6 @@
 
 install(FILES
     soniks_data_sink.block.yml
+    soniks_data_sink_grsatellites.block.yml
     DESTINATION share/gnuradio/grc/blocks
 )

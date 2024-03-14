@@ -36,12 +36,12 @@ parameters:
 -   id: sat_name
     label: Satellite Name (From TLE File)
     dtype: raw
-    default: GEOSCAN
+    default: 'GEOSCAN'
     hide: none
 -   id: tle_p
     label: TLE File Path
     dtype: raw
-    default: /path/to/tle.txt
+    default: '/path/to/tle.txt'
     hide: none
 -   id: up
     label: Update Period (ms)
