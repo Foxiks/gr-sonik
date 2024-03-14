@@ -27,7 +27,6 @@ class soniks_data_sink_grsatellites(gr.sync_block):
         self.x=0
         self.pre_x=0
         self.old_pre_x=0
-        self.out_frame_temp_arr=[]
 
         if(not os.path.exists(f"{decoded_data_file_path}")):
             os.system(f"mkdir -p {decoded_data_file_path}")
@@ -42,8 +41,6 @@ class soniks_data_sink_grsatellites(gr.sync_block):
             print('[ERROR] Received invalid message type. Expected u8vector')
             return
         msg_out = pmt.u8vector_elements(msg)
-        for i in range(len(msg_out)):
-            self.out_frame_temp_arr.append(msg_out[i])
 
         self.pre_x=time.mktime(datetime.datetime.now().timetuple())
         if(self.pre_x>self.old_pre_x):
@@ -52,6 +49,5 @@ class soniks_data_sink_grsatellites(gr.sync_block):
             self.x+=1
         time_st=datetime.datetime.now().strftime(f"%Y-%m-%dT%H-%M-%S")
         with open(f"{self.decoded_data_file_path}data_{self.sat_id}_{time_st}_g{self.x}",'wb') as out1:
-            out1.write(int(''.join([hex(self.out_frame_temp_arr[i])[2:].zfill(2) for i in range(len(self.out_frame_temp_arr))]), 16).to_bytes(len(msg_out),'big'))
-        self.out_frame_temp_arr.clear()
+            out1.write(int(''.join([hex(msg_out[i])[2:].zfill(2) for i in range(len(msg_out))]), 16).to_bytes(len(msg_out),'big'))
         self.old_pre_x=self.pre_x
