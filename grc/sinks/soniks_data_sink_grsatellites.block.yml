@@ -13,8 +13,8 @@ parameters:
   default: '0'
 
 inputs:
--   label: raw
-    dtype: byte
+-   label: in
+    dtype: raw
     vlen: 1
 
 templates:
