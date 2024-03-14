@@ -1,6 +1,6 @@
 id: soniks_doppler_shift_compensator
 label: Soniks Doppler shift compensator
-category: '[Sonik]/Doppler'
+category: '[Soniks]/Doppler'
 
 parameters:
 -   id: c_rf
@@ -60,8 +60,8 @@ outputs:
     vlen: 1
 
 templates:
-    imports: 'import sonik.hier'
-    make: "sonik.hier.soniks_doppler_shift_compensator(\n    c_rf=${ c_rf },\n    inv=${ inv\
+    imports: 'import soniks.hier'
+    make: "soniks.hier.soniks_doppler_shift_compensator(\n    c_rf=${ c_rf },\n    inv=${ inv\
         \ },\n    s_alt=${ s_alt },\n    s_lat=${ s_lat },\n    s_lon=${ s_lon },\n\
         \    samp_rate=${ samp_rate },\n    sat_name=${ sat_name },\n    tle_p=${\
         \ tle_p },\n    up=${ up },\n)"

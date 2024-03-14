@@ -1,6 +1,6 @@
 id: soniks_frames_mixer
 label: Soniks Frames Mixer
-category: '[Sonik]/Packet Operations'
+category: '[Soniks]/Packet Operations'
 
 parameters: []
 
@@ -18,8 +18,8 @@ outputs:
     vlen: 1
 
 templates:
-    imports: 'import sonik.hier  # grc-generated hier_block'
-    make: sonik.hier.soniks_frames_mixer()
+    imports: 'import soniks.hier  # grc-generated hier_block'
+    make: soniks.hier.soniks_frames_mixer()
     callbacks: []
 
 file_format: 1

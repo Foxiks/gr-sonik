@@ -1,6 +1,6 @@
 id: soniks_audio_sink
 label: Soniks Audio Sink
-category: '[Sonik]/Audio'
+category: '[Soniks]/Audio'
 
 parameters:
 - id: samp_rate
@@ -22,7 +22,7 @@ inputs:
     vlen: 1
 
 templates:
-    imports: import sonik.audio
-    make: sonik.audio.soniks_audio_sink(${samp_rate}, ${path}, ${bitrate})
+    imports: import soniks.audio
+    make: soniks.audio.soniks_audio_sink(${samp_rate}, ${path}, ${bitrate})
 
 file_format: 1

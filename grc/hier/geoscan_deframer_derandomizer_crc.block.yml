@@ -1,6 +1,6 @@
 id: geoscan_deframer_derandomizer_crc
 label: GEOSCAN UHF Link Deframer and Derandomizer (CRC)
-category: '[Sonik]/Deframes'
+category: '[Soniks]/Deframes'
 
 parameters:
 -   id: crc_state
@@ -35,8 +35,8 @@ outputs:
     vlen: 1
 
 templates:
-    imports: 'import sonik.hier'
-    make: "sonik.hier.geoscan_deframer_derandomizer_crc(\n    crc_state=${ crc_state },\n   \
+    imports: 'import soniks.hier'
+    make: "soniks.hier.geoscan_deframer_derandomizer_crc(\n    crc_state=${ crc_state },\n   \
         \ packet_length=${ packet_length },\n    syncword=${ syncword },\n    threshold=${\
         \ threshold },\n)"
     callbacks:

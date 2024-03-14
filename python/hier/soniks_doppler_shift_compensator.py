@@ -11,7 +11,7 @@ from gnuradio import analog
 from gnuradio import blocks
 import pmt
 from gnuradio import gr
-import sonik.doppler
+import soniks.doppler
 
 
 
@@ -44,7 +44,7 @@ class soniks_doppler_shift_compensator(gr.hier_block2):
         # Blocks
         ##################################################
 
-        self.doppler_shift_calc_0 = sonik.doppler.doppler_shift_calc(sat_name, c_rf, tle_p, s_lon, s_lat, s_alt, inv)
+        self.doppler_shift_calc_0 = soniks.doppler.doppler_shift_calc(sat_name, c_rf, tle_p, s_lon, s_lat, s_alt, inv)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
         self.blocks_message_strobe_0 = blocks.message_strobe(pmt.intern("trigger"), up)
         self.analog_sig_source_x_0 = analog.sig_source_c(samp_rate, analog.GR_COS_WAVE, 1, 1, 0, 0)

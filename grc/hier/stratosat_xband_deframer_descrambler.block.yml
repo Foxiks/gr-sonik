@@ -1,6 +1,6 @@
 id: stratosat_xband_deframer_descrambler
 label: Stratosat TK-1 X-Band Deframer and Descrambler
-category: '[Sonik]/Deframes'
+category: '[Soniks]/Deframes'
 
 parameters:
 -   id: frame_len
@@ -30,8 +30,8 @@ outputs:
     vlen: 1
 
 templates:
-    imports: 'import sonik.hier  # grc-generated hier_block'
-    make: "sonik.hier.stratosat_xband_deframer_descrambler(\n    frame_len=${ frame_len },\n\
+    imports: 'import soniks.hier  # grc-generated hier_block'
+    make: "soniks.hier.stratosat_xband_deframer_descrambler(\n    frame_len=${ frame_len },\n\
         \    syncword=${ syncword },\n    threshold=${ threshold },\n)"
     callbacks:
     - set_frame_len(${ frame_len })

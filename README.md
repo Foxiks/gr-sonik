@@ -1,5 +1,5 @@
-# gr-sonik
-OOT GnuRadio blocks for working in the SONIK network
+# gr-soniks
+OOT GnuRadio blocks for working in the SONIKS network
 
 ### Install Dependencies
 1. gr-Satellites: https://github.com/daniestevez/gr-satellites

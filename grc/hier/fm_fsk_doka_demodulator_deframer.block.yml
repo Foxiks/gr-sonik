@@ -1,6 +1,6 @@
 id: fm_fsk_doka_demodulator_deframer
 label: FM-FSK (DOKA) Demodulator and Deframer
-category: '[Sonik]/Satellites'
+category: '[Soniks]/Satellites'
 
 parameters:
 -   id: baud_rate
@@ -45,8 +45,8 @@ outputs:
     vlen: 1
 
 templates:
-    imports: 'import sonik.hier  # grc-generated hier_block'
-    make: "sonik.hier.fm_fsk_doka_demodulator_deframer(\n    baud_rate=${ baud_rate },\n    pack_len=${ pack_len\
+    imports: 'import soniks.hier  # grc-generated hier_block'
+    make: "soniks.hier.fm_fsk_doka_demodulator_deframer(\n    baud_rate=${ baud_rate },\n    pack_len=${ pack_len\
         \ },\n    samp_rate=${ samp_rate },\n    syncword=${ syncword },\n    taps=${\
         \ taps },\n    threshold=${ threshold },\n)"
     callbacks:

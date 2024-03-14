@@ -1,6 +1,6 @@
 id: geoscan_uhf_scrambler
 label: GEOSCAN UHF Link Descrambler (CRC)
-category: '[Sonik]/Scramblers'
+category: '[Soniks]/Scramblers'
 
 inputs:
 -   domain: message
@@ -19,7 +19,7 @@ parameters:
   default: True
 
 templates:
-    imports: import sonik.scramblers
-    make: sonik.scramblers.geoscan_uhf_scrambler(${crc_selector})
+    imports: import soniks.scramblers
+    make: soniks.scramblers.geoscan_uhf_scrambler(${crc_selector})
 
 file_format: 1

@@ -1,6 +1,6 @@
 id: stratosat_xband_scrambler
 label: Startosat X-Band Scrambler
-category: '[Sonik]/Scramblers'
+category: '[Soniks]/Scramblers'
 
 inputs:
 -   domain: message
@@ -11,7 +11,7 @@ outputs:
     id: out
 
 templates:
-    imports: import sonik.scramblers
-    make: sonik.scramblers.stratosat_xband_scrambler()
+    imports: import soniks.scramblers
+    make: soniks.scramblers.stratosat_xband_scrambler()
 
 file_format: 1

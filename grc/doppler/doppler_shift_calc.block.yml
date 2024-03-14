@@ -1,6 +1,6 @@
 id: doppler_shift_calc
 label: GEOSCAN Doppler shift compensation calculator
-category: '[Sonik]/Doppler'
+category: '[Soniks]/Doppler'
 
 parameters:
 - id: satllite_name
@@ -41,7 +41,7 @@ outputs:
     id: out
 
 templates:
-    imports: import sonik.doppler
-    make: sonik.doppler.doppler_shift_calc(${satllite_name}, ${center_freq}, ${tle_path}, ${lon}, ${lat}, ${alt}, ${inv})
+    imports: import soniks.doppler
+    make: soniks.doppler.doppler_shift_calc(${satllite_name}, ${center_freq}, ${tle_path}, ${lon}, ${lat}, ${alt}, ${inv})
 
 file_format: 1

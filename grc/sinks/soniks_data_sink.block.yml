@@ -1,6 +1,6 @@
 id: soniks_data_sink
 label: Soniks Decoded Frames Sink
-category: '[Sonik]/Sinks'
+category: '[Soniks]/Sinks'
 
 parameters:
 - id: decoded_data_file_path
@@ -27,7 +27,7 @@ outputs:
     vlen: 1
 
 templates:
-    imports: import sonik.sinks
-    make: sonik.sinks.soniks_data_sink(${decoded_data_file_path}, ${sat_id}, ${packet_len})
+    imports: import soniks.sinks
+    make: soniks.sinks.soniks_data_sink(${decoded_data_file_path}, ${sat_id}, ${packet_len})
 
 file_format: 1

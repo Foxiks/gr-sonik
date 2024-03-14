@@ -1,6 +1,6 @@
 id: complex_to_float32IQ
 label: Complex to Float (IQ)
-category: '[Sonik]/Type Convertes'
+category: '[Soniks]/Type Convertes'
 
 inputs:
 -   label: in
@@ -13,7 +13,7 @@ outputs:
     vlen: 1
 
 templates:
-    imports: import sonik.type_convertes
-    make: sonik.type_convertes.complex_to_float32IQ()
+    imports: import soniks.type_convertes
+    make: soniks.type_convertes.complex_to_float32IQ()
 
 file_format: 1
