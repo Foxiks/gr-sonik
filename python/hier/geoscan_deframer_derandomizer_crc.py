@@ -11,7 +11,7 @@ from gnuradio import blocks
 from gnuradio import gr
 from gnuradio import gr, pdu
 import satellites.hier
-import sonik.scramblers
+import soniks.scramblers
 
 
 
@@ -46,7 +46,7 @@ class geoscan_deframer_derandomizer_crc(gr.hier_block2):
         )
         self.pdu_pdu_to_tagged_stream_1_0 = pdu.pdu_to_tagged_stream(gr.types.byte_t, 'packet_len')
         self.pdu_pdu_to_tagged_stream_0 = pdu.pdu_to_tagged_stream(gr.types.byte_t, 'packet_len')
-        self.geoscan_uhf_scrambler_0 = sonik.scramblers.geoscan_uhf_scrambler(crc_state)
+        self.geoscan_uhf_scrambler_0 = soniks.scramblers.geoscan_uhf_scrambler(crc_state)
         self.blocks_pack_k_bits_bb_0 = blocks.pack_k_bits_bb(1)
         self.blocks_null_sink_1_0 = blocks.null_sink(gr.sizeof_char*1)
 

@@ -1,6 +1,6 @@
 id: soniks_data_sink_grsatellites
 label: Soniks Decoded Frames Sink (Gr-Satellites)
-category: '[Sonik]/Sinks'
+category: '[Soniks]/Sinks'
 
 parameters:
 - id: decoded_data_file_path
@@ -18,7 +18,7 @@ inputs:
     vlen: 1
 
 templates:
-    imports: import sonik.sinks
-    make: sonik.sinks.soniks_data_sink_grsatellites(${decoded_data_file_path}, ${sat_id})
+    imports: import soniks.sinks
+    make: soniks.sinks.soniks_data_sink_grsatellites(${decoded_data_file_path}, ${sat_id})
 
 file_format: 1

@@ -1,6 +1,6 @@
 find_package(PkgConfig)
 
-PKG_CHECK_MODULES(PC_GR_SONIK gnuradio-soniks)
+PKG_CHECK_MODULES(PC_GR_SONIKS gnuradio-soniks)
 
 FIND_PATH(
     GR_SONIKS_INCLUDE_DIRS

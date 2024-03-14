@@ -10,7 +10,7 @@
 from gnuradio import gr
 from gnuradio import gr, pdu, blocks
 import satellites.hier
-import sonik.scramblers
+import soniks.scramblers
 
 
 
@@ -37,7 +37,7 @@ class stratosat_xband_deframer_descrambler(gr.hier_block2):
         # Blocks
         ##################################################
         self.blocks_pack_k_bits_bb_1 = blocks.pack_k_bits_bb(1)
-        self.stratosat_xband_scrambler_0 = sonik.scramblers.stratosat_xband_scrambler()
+        self.stratosat_xband_scrambler_0 = soniks.scramblers.stratosat_xband_scrambler()
         self.satellites_sync_to_pdu_packed_0 = satellites.hier.sync_to_pdu_packed(
             packlen=frame_len,
             sync=syncword,

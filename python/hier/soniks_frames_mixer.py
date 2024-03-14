@@ -9,7 +9,7 @@
 
 from gnuradio import gr
 from gnuradio import gr, pdu
-import sonik.packet_operations
+import soniks.packet_operations
 
 
 
@@ -29,7 +29,7 @@ class soniks_frames_mixer(gr.hier_block2):
         # Blocks
         ##################################################
 
-        self.soniks_messages_multiplyer_pdu_0 = sonik.packet_operations.soniks_messages_mixer_pdu()
+        self.soniks_messages_multiplyer_pdu_0 = soniks.packet_operations.soniks_messages_mixer_pdu()
         self.pdu_tagged_stream_to_pdu_0_0 = pdu.tagged_stream_to_pdu(gr.types.byte_t, 'packet_len')
         self.pdu_tagged_stream_to_pdu_0 = pdu.tagged_stream_to_pdu(gr.types.byte_t, 'packet_len')
         self.pdu_pdu_to_tagged_stream_0 = pdu.pdu_to_tagged_stream(gr.types.byte_t, 'packet_len')

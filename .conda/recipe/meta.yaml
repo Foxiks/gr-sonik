@@ -1,4 +1,4 @@
-{% set oot_name = "sonik" %}
+{% set oot_name = "soniks" %}
 {% set name = "gnuradio-" + oot_name %}
 # Set package version from cleaned up git tags if possible,
 # otherwise fall back to date-based version.
@@ -86,9 +86,9 @@ about:
   # of the license text file within the source directory, e.g. "LICENSE".
   # See https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#license-file
 
-  #home: https://github.com/<username>/gr-sonik
+  #home: https://github.com/<username>/gr-soniks
   #license: GPL-3.0-or-later
   #license_file: LICENSE
-  #summary: GNU Radio sonik module
+  #summary: GNU Radio soniks module
   #description: >
-  #  Short description of the gr-sonik module.
+  #  Short description of the gr-soniks module.

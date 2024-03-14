@@ -3,7 +3,7 @@
 
 # Copyright 2024 Foxiks UB1QBJ
 #
-# This file is part of gr-sonik
+# This file is part of gr-soniks
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
