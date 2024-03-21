@@ -1,0 +1,17 @@
+id: soniks_fengyun2_descrambler
+label: FengYun-2 S-VISSR2.0 Descrambler
+category: '[Soniks]/Scramblers'
+
+inputs:
+-   domain: message
+    id: in
+
+outputs:
+-   domain: message
+    id: out
+
+templates:
+    imports: import soniks.scramblers
+    make: soniks.scramblers.soniks_fengyun2_descrambler()
+
+file_format: 1

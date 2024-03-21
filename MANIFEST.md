@@ -3,7 +3,7 @@ brief: Short description of gr-soniks
 tags: # Tags are arbitrary, but look at CGRAN what other authors are using
   - sdr
 author:
-  - Author Name <authors@email.address>
+  - Egor UB1QBJ <authors@email.address>
 copyright_owner:
   - Copyright Owner 1
 license:

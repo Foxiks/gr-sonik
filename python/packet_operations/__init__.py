@@ -10,3 +10,4 @@
 
 
 from .soniks_messages_mixer_pdu import soniks_messages_mixer_pdu
+from .soniks_fengyun2_bytes_inverter import soniks_fengyun2_bytes_inverter

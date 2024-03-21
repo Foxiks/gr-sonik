@@ -1,0 +1,17 @@
+id: soniks_fengyun2_bytes_inverter
+label: FengYun-2 S-VISSR2.0 Bytes Inverter
+category: '[Soniks]/Packet Operations'
+
+inputs:
+-   domain: message
+    id: in
+
+outputs:
+-   domain: message
+    id: out
+
+templates:
+    imports: import soniks.packet_operations
+    make: soniks.packet_operations.soniks_fengyun2_bytes_inverter()
+
+file_format: 1

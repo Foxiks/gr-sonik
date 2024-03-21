@@ -11,3 +11,4 @@
 
 from .stratosat_xband_scrambler import stratosat_xband_scrambler
 from .geoscan_scrambler_crc import geoscan_uhf_scrambler
+from .soniks_fengyun2_descrambler import soniks_fengyun2_descrambler

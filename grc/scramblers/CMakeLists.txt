@@ -21,5 +21,6 @@
 install(FILES
     stratosat_xband_scrambler.block.yml
     geoscan_scrambler_crc.block.yml
+    soniks_fengyun2_descrambler.block.yml
     DESTINATION share/gnuradio/grc/blocks
 )
