@@ -26,5 +26,7 @@ install(FILES
     soniks_message_chunks_strip.block.yml
     soniks_fengyun2_frames_collector.block.yml
     soniks_fengyun2_decoder.block.yml
+    soniks_pdu_hash_analyzer.block.yml
+    soniks_messages_skip_last.block.yml
     DESTINATION share/gnuradio/grc/blocks
 )

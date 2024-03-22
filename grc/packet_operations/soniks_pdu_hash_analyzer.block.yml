@@ -1,0 +1,17 @@
+id: soniks_pdu_hash_analyzer
+label: PDU Hash Analyzer
+category: '[Soniks]/Packet Operations'
+
+inputs:
+-   domain: message
+    id: in
+
+outputs:
+-   domain: message
+    id: out
+
+templates:
+    imports: import soniks.packet_operations
+    make: soniks.packet_operations.soniks_pdu_hash_analyzer()
+
+file_format: 1
