@@ -5,8 +5,8 @@ category: '[Soniks]/Packet Operations'
 parameters:
 - id: path
   label: Decoded Data File Path
-  dtype: raw
-  default: '/tmp/.fengyun2/data/'
+  dtype: file_save
+  default: '/home/user/'
 - id: log_state
   label: Log
   dtype: int

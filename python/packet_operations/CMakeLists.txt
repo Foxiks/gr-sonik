@@ -35,6 +35,10 @@ GR_PYTHON_INSTALL(
     soniks_messages_mixer_pdu.py
     soniks_fengyun2_bytes_inverter.py
     soniks_fengyun2_data_saver.py
+    soniks_message_chunks_strip.py
+    soniks_messages_skip_head.py
+    soniks_fengyun2_frames_collector.py
+    soniks_fengyun2_decoder.py
     DESTINATION ${GR_PYTHON_DIR}/soniks/packet_operations
 )
 

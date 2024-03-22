@@ -1,0 +1,23 @@
+id: soniks_message_chunks_strip
+label: PDU To Chunks
+category: '[Soniks]/Packet Operations'
+
+parameters:
+- id: chunk_len
+  label: Chunks Length
+  dtype: int
+  default: '64'
+
+inputs:
+-   domain: message
+    id: in
+
+outputs:
+-   domain: message
+    id: out
+
+templates:
+    imports: import soniks.packet_operations
+    make: soniks.packet_operations.soniks_message_chunks_strip(${chunk_len})
+
+file_format: 1

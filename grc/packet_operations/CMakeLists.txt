@@ -22,5 +22,9 @@ install(FILES
     soniks_messages_mixer_pdu.block.yml
     soniks_fengyun2_bytes_inverter.block.yml
     soniks_fengyun2_data_saver.block.yml
+    soniks_messages_skip_head.block.yml
+    soniks_message_chunks_strip.block.yml
+    soniks_fengyun2_frames_collector.block.yml
+    soniks_fengyun2_decoder.block.yml
     DESTINATION share/gnuradio/grc/blocks
 )
