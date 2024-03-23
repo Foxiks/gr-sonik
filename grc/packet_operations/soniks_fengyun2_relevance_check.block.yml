@@ -1,0 +1,17 @@
+id: soniks_fengyun2_relevance_check
+label: FengYun-2 S-VISSR2.0 Frames Relevance Check
+category: '[Soniks]/Packet Operations'
+
+inputs:
+-   domain: message
+    id: in
+
+outputs:
+-   domain: message
+    id: out
+
+templates:
+    imports: import soniks.packet_operations
+    make: soniks.packet_operations.soniks_fengyun2_relevance_check()
+
+file_format: 1

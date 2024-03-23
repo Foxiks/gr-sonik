@@ -136,7 +136,9 @@ class soniks_fengyun2_decoder(gr.sync_block):
         print("   FengYun-2 S-VISSR 2.0 decoder   ")
         print("     by Egor UB1QBJ (gr-Soniks)    ")
         print("-----------------------------------")
-
+        if(len(self.frames_array)==0):
+            print("Done!")
+            return
         self.l = self.get_size()
         self.grayImage = numpy.array(self.frames_array).reshape(int(self.l), int(44356))
         p1 = Process(target=self.ir_1_saver())

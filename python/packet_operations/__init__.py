@@ -18,3 +18,4 @@ from .soniks_fengyun2_frames_collector import soniks_fengyun2_frames_collector
 from .soniks_fengyun2_decoder import soniks_fengyun2_decoder
 from .soniks_pdu_hash_analyzer import soniks_pdu_hash_analyzer
 from .soniks_messages_skip_last import soniks_messages_skip_last
+from .soniks_fengyun2_relevance_check import soniks_fengyun2_relevance_check
