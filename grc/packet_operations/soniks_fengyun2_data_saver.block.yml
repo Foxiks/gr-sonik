@@ -1,5 +1,5 @@
 id: soniks_fengyun2_data_saver
-label: FengYun2 S-VISSR2.0 Data Saver
+label: FengYun-2 S-VISSR2.0 Data Saver
 category: '[Soniks]/Packet Operations'
 
 parameters:
@@ -11,13 +11,18 @@ parameters:
   label: Log
   dtype: int
   default: 'True'
+- id: corrector_state
+  label: Frames Corrector
+  dtype: int
+  default: 'True'
 
 inputs:
--   domain: message
-    id: in
+-   label: in
+    dtype: byte
+    vlen: 1
 
 templates:
     imports: import soniks.packet_operations
-    make: soniks.packet_operations.soniks_fengyun2_data_saver(${path}, ${log_state})
+    make: soniks.packet_operations.soniks_fengyun2_data_saver(${path}, ${log_state}, ${corrector_state})
 
 file_format: 1
